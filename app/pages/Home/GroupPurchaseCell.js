@@ -19,18 +19,19 @@ class GroupPurchaseCell extends PureComponent {
         let { info } = this.props
         let imageUrl = info.imageUrl.replace('w.h', '160.0')
         return (
-            <TouchableOpacity style={styles.container} onPress={() => this.props.onPress(info)}>
+            <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.container}
+                onPress={() => this.props.onPress(info)}>
                 <Image source={{ uri: imageUrl }} style={styles.icon} />
 
                 <View style={styles.rightContainer}>
                     <Text>{info.title}</Text>
-                    <View>
-                    </View>
+                    <View></View>
                     <Text style={{ marginTop: 8 }}>{info.subtitle}</Text>
                     <View style={{ flex: 1, justifyContent: 'flex-end' }}>
                         <Text style={styles.price}>{info.price}元</Text>
                     </View>
-
                 </View>
             </TouchableOpacity>
         );

@@ -11,6 +11,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.2",
     "react-native-splash-screen": "^2.1.0",
+    "react-native-swiper": "^1.5.4",
     "react-native-switch-pro": "^0.4.2",
     "react-native-vector-icons": "^4.2.0",
     "react-native-viewpager": "^0.2.13",

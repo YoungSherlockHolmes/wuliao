@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import FontSize from '../component/TextSize';
 import Colors from '../component/Colors';
+import Px2dp from '../component/ResolutionRatio';
 
 let {height, width} = Dimensions.get('window');
 
@@ -21,6 +22,8 @@ global.SCREEN_WIDTH = width;
 global.SCREEN_HEIGHT = height;
 // 获取屏幕分辨率
 global.PixelRatio = PixelRatio.get();
+// 最小线宽
+global.pixel = 1 / PixelRatio;
 // 系统是iOS
 global.iOS = (Platform.OS === 'ios');
 // 系统是安卓
@@ -29,13 +32,15 @@ global.Android = (Platform.OS === 'android');
 global.COLORS = Colors;
 // 适配字体
 global.FONT_SIZE = FontSize;
-// 用户登录状态
-global.TOKEN = false;
-// TabBarIcon图标大小
-global.TabBarIcon = {
-    width: 35,
-    height: 35,
-};
+//分辨率
+global.PX2DP = Px2dp;
+// // 用户登录状态
+// global.TOKEN = false;
+// // TabBarIcon图标大小
+// global.TabBarIcon = {
+//     width: 35,
+//     height: 35,
+// };
 
 
 

@@ -18,7 +18,7 @@ import {
 import './common/Global';//入口处初始化全局变量
 
 import Toast from '@remobile/react-native-toast';
-import SplashScreen from 'react-native-splash-screen'
+
 
 import MainContainer from './container/mainContainer';//主页
 import Land from './pages/land';//登陆页
@@ -31,16 +31,6 @@ class Roots extends Component {
     super(props);
     this.onBackAndroid = this.onBackAndroid.bind(this);
     this.onExitApp = this.onExitApp.bind(this);
-  }
-
-  componentDidMount() {
-    //入口处初始化本地数据
-    // store.save('TrainIndex', {
-
-    // })
-    // do stuff while splash screen is shown
-    // After having done stuff (such as async tasks) hide the splash screen
-    SplashScreen.hide();
   }
 
   componentWillMount() {
