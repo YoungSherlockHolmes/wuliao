@@ -147,3 +147,13 @@ DrawerNavigatorConfig
     labelStyle - 当您的标签是字符串时，要覆盖内容部分中的文本样式的样式对象 
 
 ```
+
+## 高德地图相关说明   ##
+```
+注意：该项目只做了安卓版本的相关配置，ios请移驾到↓面的链接自行配置。
+引用的第三方库：https://github.com/react-native-component/react-native-smart-amap-location
+    1.按照库里面的说明文档做好相关配置
+    2.关于获取开发版和发布版的SHA1值，相关教程可以看：http://051z.cc/food/javascript/p_342.html
+    3.拿到SHA1之后，去高德地图官网申请key,链接：http://lbs.amap.com/api/
+    4.这个库下载之后需要替换源文件，因为之前的方法已经过时了，有需要可以免费提供，请加QQ：626097912
+```
