@@ -17,6 +17,7 @@ import VideoPage from './videoPage';
 import ZonePage from './zonePage';
 import PbHeader from '../common/PbHeader';//复用header
 import IndexDemo from '../pages/indexDemo';
+import AMapLocationDemo from '../pages/AMapLocationDemo';
 import NetworkState from '../pages/Zone/networkState';
 
 import {
@@ -117,6 +118,17 @@ const Mains = StackNavigator({
       header: (
         <PbHeader
           title="demo页面"
+          //customIcon={'ios-arrow-back'}   //可自定义左边箭头类型
+          navigation={navigation} />
+      ),
+    }),
+  },
+  AMapLocationDemo: {
+    screen: AMapLocationDemo,
+    navigationOptions: ({navigation}) => ({
+      header: (
+        <PbHeader
+          title="定位"
           //customIcon={'ios-arrow-back'}   //可自定义左边箭头类型
           navigation={navigation} />
       ),

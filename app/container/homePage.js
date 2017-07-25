@@ -55,7 +55,7 @@ class HomePase extends React.Component {
 
     componentDidMount() {
         this.requestData();
-         SplashScreen.hide();
+        SplashScreen.hide();
     }
 
     requestData() {
@@ -106,6 +106,33 @@ class HomePase extends React.Component {
         return item.id
     }
 
+    _renderHeader() {
+        return (
+            <View style={styles.Search_bar}>
+                <TouchableOpacity
+                    activeOpacity={0.8}
+                    style={styles.Search_bar_lf}>
+                    <Icon name="ios-pin-outline" size={23} color="white" />
+                    <Text style={styles.Search_bar_lf_tx}>临武</Text>
+                </TouchableOpacity>
+                <View>
+                    <TouchableOpacity
+                        activeOpacity={1}
+                        style={styles.style_sousuo_input}>
+                        <Text>输入商家名、品类或商圈</Text>
+                    </TouchableOpacity>
+                    <View style={styles.Search_bar_ce}>
+                        <Icons name="magnifier" size={16} color="#484B40" />
+                    </View>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={styles.Search_bar_ce_rg}>
+                        <Icon name="ios-mic-outline" size={22} color="#484B40" />
+                    </TouchableOpacity>
+                </View>
+            </View>
+        )
+    }
     _renderLtime() {
         return (
             <View>
@@ -144,7 +171,7 @@ class HomePase extends React.Component {
                                 let m = item.split("|")
                                 let layout = (
                                     <View style={styles.lTimeList}>
-                                        <Image source={{uri:m[1]}}
+                                        <Image source={{ uri: m[1] }}
                                             style={styles.lTimeList_img}
                                             />
                                         <Text style={styles.lTimeList_text}>
@@ -176,38 +203,11 @@ class HomePase extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.Search_bar}>
-                    <TouchableOpacity
-                        activeOpacity={0.8}
-                        style={styles.Search_bar_lf}>
-                        <Icon name="ios-qr-scanner" size={26} color="white" />
-                        <Text style={styles.Search_bar_lf_tx}>扫啊扫</Text>
-                    </TouchableOpacity>
-                    <View>
-                        <TouchableOpacity
-                            activeOpacity={1}
-                            style={styles.style_sousuo_input}>
-                            <Text>输入商家名、品类或商圈</Text>
-                        </TouchableOpacity>
-                        <View style={styles.Search_bar_ce}>
-                            <Icons name="magnifier" size={16} color="#484B40" />
-                        </View>
-                        <TouchableOpacity
-                            activeOpacity={0.8}
-                            style={styles.Search_bar_ce_rg}>
-                            <Icon name="ios-mic-outline" size={22} color="#484B40" />
-                        </TouchableOpacity>
-                    </View>
-                    <TouchableOpacity
-                        activeOpacity={0.8}
-                        style={styles.Search_bar_rg}>
-                        <Icon name="ios-text-outline" size={26} color="white" />
-                        <Text style={styles.Search_bar_lf_tx}>消息</Text>
-                    </TouchableOpacity>
-                </View>
+                {this._renderHeader()}
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={{ height: 150 }}>
                         <Focus />
+                        {/*<Swipers />*/}
                     </View>
                     <View style={styles.card}>
                         {this._renderLtime()}
@@ -253,10 +253,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#E13032',
     },
     Search_bar_lf: {
-        width: 50, justifyContent: 'center', alignItems: 'center',
+        width: 70, justifyContent: 'center', alignItems: 'center', flexDirection: 'row',
     },
     Search_bar_lf_tx: {
-        color: 'white', fontSize: FONT_SIZE(10)
+        color: 'white', fontSize: FONT_SIZE(14), paddingLeft: 5
     },
     Search_bar_ce: {
         position: 'absolute', left: 10, top: 12
@@ -264,20 +264,17 @@ const styles = StyleSheet.create({
     Search_bar_ce_rg: {
         position: 'absolute', right: 10, top: 10
     },
-    Search_bar_rg: {
-        width: 50, justifyContent: 'center', alignItems: 'center',
-    },
-    lTimeScrollView:{
+    lTimeScrollView: {
         flexDirection: "row", alignItems: "center", paddingTop: 15
     },
     lTimeList: {
         backgroundColor: "#fff",
         alignItems: "center"
     },
-    lTimeList_img:{
+    lTimeList_img: {
         height: PX2DP(85), width: PX2DP(85), resizeMode: 'cover'
     },
-    lTimeList_text:{
+    lTimeList_text: {
         fontSize: FONT_SIZE(13), color: "#333", marginVertical: 5
     },
     time: {

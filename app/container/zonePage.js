@@ -112,6 +112,21 @@ class ZonePage extends Component {
                   <Icon name="chevron-thin-right" size={22} color="#BFBFBC" />
                 </View>
               </TouchableOpacity>
+              <View style={styles.list_core_border}></View>
+            </View>
+            <View style={styles.list_core_abroad}>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('AMapLocationDemo')}
+                activeOpacity={0.75}
+                style={styles.list_core_within}>
+                <View style={styles.list_core_lf}>
+                  <Icon name="paper-plane" size={23} color="#49A3F8" />
+                  <Text style={styles.list_core_lf_tx}>定位</Text>
+                </View>
+                <View>
+                  <Icon name="chevron-thin-right" size={22} color="#BFBFBC" />
+                </View>
+              </TouchableOpacity>
             </View>
           </View>
         </ScrollView>

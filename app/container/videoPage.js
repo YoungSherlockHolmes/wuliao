@@ -36,10 +36,10 @@ const styles = StyleSheet.create({
     margin: 10,
     
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-    fontSize:18
-  },
+  // instructions: {
+  //   textAlign: 'center',
+  //   color: '#333333',
+  //   marginBottom: 5,
+  //   fontSize:18
+  // },
 });

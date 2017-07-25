@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "bundle-android": "node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/"
   },
   "dependencies": {
     "@remobile/react-native-toast": "^1.0.6",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.2",
+    "react-native-smart-amap-location": "^1.1.3",
+    "react-native-smart-app-event-listener-enhance": "^1.1.1",
+    "react-native-smart-button": "^2.0.0",
     "react-native-splash-screen": "^2.1.0",
     "react-native-swiper": "^1.5.4",
     "react-native-switch-pro": "^0.4.2",
